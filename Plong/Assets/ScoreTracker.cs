@@ -5,8 +5,9 @@ using UnityEngine;
 public class ScoreTracker : MonoBehaviour
 {
 
-    public int Player1Score = 0;
-    public int Player2Score = 0;
+    [SerializeField] private int Player1Score = 0;
+    [SerializeField] private int Player2Score = 0;
+    public RoundReset _RoundReset;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,14 @@ public class ScoreTracker : MonoBehaviour
     {
         Player1Score++;
         Debug.Log("GOAL PLAYER 1!");
+        _RoundReset.Reset();
     }
 
     public void GoalPlayer2()
     {
         Player2Score++;
         Debug.Log("GOAL PLAYER 2!");
+        _RoundReset.Reset();
     }
 
 }

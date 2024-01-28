@@ -69,11 +69,13 @@ public class MoveBall : MonoBehaviour
         {
             //call function GoalPlayer2 on GameMaster
             GameMaster.GetComponent<ScoreTracker>().GoalPlayer2();
+            Destroy(gameObject);
         }
         if (collision.gameObject.name == "RightGoal")
         {
             //call function GoalPlayer1 on GameMaster
             GameMaster.GetComponent<ScoreTracker>().GoalPlayer1();
+            Destroy(gameObject);
         }
     }
 
