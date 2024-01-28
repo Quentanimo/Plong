@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoundReset : MonoBehaviour
 {
-    [SerializeField] private GameObject Ball= null;
+    [SerializeField] private GameObject Ball;
 
     private void Start()
     {

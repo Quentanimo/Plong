@@ -1170,6 +1170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2112424049}
   - component: {fileID: 2112424048}
+  - component: {fileID: 2112424050}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GameController
@@ -1191,6 +1192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1Score: 0
   Player2Score: 0
+  _RoundReset: {fileID: 2112424050}
 --- !u!4 &2112424049
 Transform:
   m_ObjectHideFlags: 0
@@ -1206,6 +1208,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2112424050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112424047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21bf1e0a23dfad479d44c88646257fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball: {fileID: 1705633251548019977, guid: 91f8fc02052c4d4468fe6c9a5eea3459, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
