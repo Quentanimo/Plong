@@ -9,9 +9,11 @@ public class MoveBall : MonoBehaviour
     public float InitForceX = 300f;             //Kickoff Force X component
     public float InitForceY = 300f;             //Kickoff Force Y component
     public float GenericForce = 300f;           //Force from colliding with wall
-    public float Gravity = 1;
+    public float Gravity = 1f;
     private GameObject GameMaster = null;       //Container Variable for GameMaster Object
-    
+    private Vector2 CurrentVelocity = Vector2.zero;
+    public float ForceMultiplier = 1f;
+    public float FM_Increment = 0.1f;
     private void Awake()
     {
         //Get Rigidbody Component from Object
@@ -39,30 +41,48 @@ public class MoveBall : MonoBehaviour
         m_Rigidbody2D.AddForce(new Vector2(InitForceX,InitForceY));
     }
 
+
+    void OnTriggerEnter2D(Collider2D collsion)
+    {
+        CurrentVelocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+        //if (collsion.gameObject.name == "TopWall")
+       
+
+        m_Rigidbody2D.velocity= new Vector2(CurrentVelocity.x, -1*CurrentVelocity.y);
+        Debug.Log("hit wall");
+ 
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-     
+        
+        CurrentVelocity = gameObject.GetComponent<Rigidbody2D>().velocity;
+        Vector2 NormVector = CurrentVelocity.normalized;
+        /*
         //---------------------Bounce Conditions--------------------
         if(collision.gameObject.name == "TopWall")
         {
-            m_Rigidbody2D.AddForce(new Vector2(0f, -GenericForce));
+            m_Rigidbody2D.AddForce(new Vector2(NormVector.x*ForceMultiplier, -GenericForce));
 
         }
         if (collision.gameObject.name == "BottomWall")
         {
-            m_Rigidbody2D.AddForce(new Vector2(0f, GenericForce));
+            m_Rigidbody2D.AddForce(new Vector2(NormVector.x * ForceMultiplier, GenericForce));
 
         }
+        */
+
         if (collision.gameObject.name == "Player1")
         {
-            m_Rigidbody2D.AddForce(new Vector2(GenericForce, 0));
+            m_Rigidbody2D.AddForce(new Vector2(-NormVector.x * ForceMultiplier*GenericForce, GenericForce));
+            //ForceMultiplier += FM_Increment;
 
         }
         if (collision.gameObject.name == "Player2")
         {
-            m_Rigidbody2D.AddForce(new Vector2(-GenericForce, 0f));
-
+            m_Rigidbody2D.AddForce(new Vector2(NormVector.x * ForceMultiplier * GenericForce, GenericForce));
+            //ForceMultiplier += FM_Increment;
         }
+        
 
         //------------------Goal Conditions----------------------
         if (collision.gameObject.name == "LeftGoal")
@@ -82,7 +102,7 @@ public class MoveBall : MonoBehaviour
 
     private void FixedUpdate()
     {
-       // Collider2D[] colliders = Physics2D.OverlapCircle([])
+        
     }
     // Update is called once per frame
     void Update()
