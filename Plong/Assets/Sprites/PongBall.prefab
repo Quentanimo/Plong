@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4015854748234088257}
   - component: {fileID: -183897934348346103}
-  - component: {fileID: 896247310367107038}
   - component: {fileID: 8301957290458908648}
   - component: {fileID: -4739045421922164620}
   - component: {fileID: 4334395893074686485}
@@ -49,24 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!114 &896247310367107038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705633251548019977}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6d56b093fc57f2469019170b4dda9a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InitForceX: 300
-  InitForceY: 300
-  GenericForce: 300
-  Gravity: 1
-  ForceMultiplier: 300
-  FM_Increment: 0
 --- !u!58 &8301957290458908648
 CircleCollider2D:
   m_ObjectHideFlags: 0
