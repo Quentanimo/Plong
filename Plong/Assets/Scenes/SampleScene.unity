@@ -812,7 +812,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816232701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fd9201c37405f542ba867501f1eed78, type: 3}
   m_Name: 
@@ -2502,6 +2502,10 @@ PrefabInstance:
     - target: {fileID: -4739045421922164620, guid: 91f8fc02052c4d4468fe6c9a5eea3459, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -183897934348346103, guid: 91f8fc02052c4d4468fe6c9a5eea3459, type: 3}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 896247310367107038, guid: 91f8fc02052c4d4468fe6c9a5eea3459, type: 3}
       propertyPath: Gravity
