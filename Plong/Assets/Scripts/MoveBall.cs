@@ -48,7 +48,7 @@ public class MoveBall : MonoBehaviour
         //if (collsion.gameObject.name == "TopWall")
        
 
-        m_Rigidbody2D.velocity= new Vector2(CurrentVelocity.x, -1*CurrentVelocity.y);
+        m_Rigidbody2D.velocity = new Vector2(CurrentVelocity.x, -1*CurrentVelocity.y);
         Debug.Log("hit wall");
  
     }
@@ -73,13 +73,13 @@ public class MoveBall : MonoBehaviour
 
         if (collision.gameObject.name == "Player1")
         {
-            m_Rigidbody2D.AddForce(new Vector2(-NormVector.x * ForceMultiplier*GenericForce, GenericForce));
+            m_Rigidbody2D.AddForce(new Vector2(-NormVector.x * ForceMultiplier * GenericForce, GenericForce));
             //ForceMultiplier += FM_Increment;
 
         }
         if (collision.gameObject.name == "Player2")
         {
-            m_Rigidbody2D.AddForce(new Vector2(NormVector.x * ForceMultiplier * GenericForce, GenericForce));
+            m_Rigidbody2D.AddForce(new Vector2(-NormVector.x * ForceMultiplier * GenericForce, GenericForce));
             //ForceMultiplier += FM_Increment;
         }
         
