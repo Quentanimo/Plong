@@ -9,6 +9,7 @@ public class KickoffBall : MonoBehaviour
     Vector2 direction; //(x,y)
     Rigidbody2D rb;
     private GameObject GameMaster = null;
+    public
 
     // Start is called before the first frame update
     void Start()
