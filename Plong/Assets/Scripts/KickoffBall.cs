@@ -14,7 +14,6 @@ public class KickoffBall : MonoBehaviour
 
     private void Awake()
     {
-
         rb = GetComponent<Rigidbody2D>();
         //find the game master object via the tag "GameController"
         //Name this game object as "GameMaster" for this script
