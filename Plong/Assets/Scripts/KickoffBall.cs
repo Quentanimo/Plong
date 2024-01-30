@@ -7,7 +7,6 @@ public class KickoffBall : MonoBehaviour
 
     public float speed;
     public float ServeDelay = 1f; //Time Between ball being instantiated and it being served to players
-    public float SpawnYMaxValue = 4; // Sets what the max Y value will be used when generating a random value for ball start position. For example. If set to 4, ball will spawn between vector position -4 and +4
     Vector2 direction; //(x,y)
     Rigidbody2D rb;
     private GameObject GameMaster = null;
@@ -15,6 +14,8 @@ public class KickoffBall : MonoBehaviour
 
     private void Awake()
     {
+
+        rb = GetComponent<Rigidbody2D>();
         //find the game master object via the tag "GameController"
         //Name this game object as "GameMaster" for this script
         GameMaster = GameObject.FindGameObjectWithTag("GameController");
@@ -30,9 +31,7 @@ public class KickoffBall : MonoBehaviour
     
      private void Start()
     {
-        //kickoff
-        rb = GetComponent<Rigidbody2D>();
-        rb.position = new Vector2(0f, Random.Range(-SpawnYMaxValue,SpawnYMaxValue));
+
         //delays ball being served to players by seconds as specified in ServeDelay
         //calls WhoGetsBall() which determines which direction the ball should be served
         Invoke("WhoGetsBall", ServeDelay);

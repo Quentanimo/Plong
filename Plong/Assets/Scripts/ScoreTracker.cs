@@ -14,7 +14,7 @@ public class ScoreTracker : MonoBehaviour
     public Text Player2ScoreText;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         P1WonLastRound = (Random.value > 0.5f);
     }
