@@ -2586,6 +2586,7 @@ MonoBehaviour:
   Player1Score: 0
   Player2Score: 0
   _RoundReset: {fileID: 2112424050}
+  P1WonLastRound: 0
   Player1ScoreText: {fileID: 1350323192}
   Player2ScoreText: {fileID: 1009213938}
 --- !u!4 &2112424049
@@ -2616,6 +2617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ball: {fileID: 1705633251548019977, guid: 91f8fc02052c4d4468fe6c9a5eea3459, type: 3}
+  SpawnYMaxValue: 4
 --- !u!114 &2112424051
 MonoBehaviour:
   m_ObjectHideFlags: 0

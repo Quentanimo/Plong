@@ -24,13 +24,19 @@ public class ScoreTracker : MonoBehaviour
     {
         
     }
+
     public void GoalPlayer1()
     {
         Player1Score++;
         P1WonLastRound = true;
         Player1ScoreText.text = Player1Score.ToString();
-        _RoundReset.Reset();
-        
+        if (Player1Score > 10 & Player1Score - Player2Score > 1)
+        {
+            Debug.Log("Player 1 Wins");
+        }
+        else {
+            _RoundReset.Reset();
+        }
     }
 
     public void GoalPlayer2()
@@ -39,7 +45,14 @@ public class ScoreTracker : MonoBehaviour
         P1WonLastRound = false;
         Debug.Log("GOAL PLAYER 2!");
         Player2ScoreText.text = Player2Score.ToString();
-        _RoundReset.Reset();
+        if (Player2Score > 10 & Player2Score - Player1Score > 1)
+        {
+            Debug.Log("Player 1 Wins");
+        }
+        else {
+            _RoundReset.Reset(); 
+        }
+
     }
 
 }
