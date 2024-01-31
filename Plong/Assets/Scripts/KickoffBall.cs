@@ -7,6 +7,7 @@ public class KickoffBall : MonoBehaviour
 
     public float speed;
     public float ServeDelay = 1f; //Time Between ball being instantiated and it being served to players
+    [SerializeField] private float TimeBeforeNextRound = 0f;
     Vector2 direction; //(x,y)
     Rigidbody2D rb;
     private GameObject GameMaster = null;
@@ -58,15 +59,11 @@ public class KickoffBall : MonoBehaviour
         //------------------Goal Conditions----------------------
         if (collision.gameObject.name == "LeftGoal")
         {
-            //call function GoalPlayer2 on GameMaster
-            GameMaster.GetComponent<ScoreTracker>().GoalPlayer2();
-            Destroy(gameObject);
+            Invoke("Player2Scores", TimeBeforeNextRound);
         }
         if (collision.gameObject.name == "RightGoal")
         {
-            //call function GoalPlayer1 on GameMaster
-            GameMaster.GetComponent<ScoreTracker>().GoalPlayer1();
-            Destroy(gameObject);
+            Invoke("Player1Scores", TimeBeforeNextRound);
         }
     }
     void WhoGetsBall()
@@ -81,6 +78,19 @@ public class KickoffBall : MonoBehaviour
             direction = new Vector2(1, Random.value);//(1,1)
         }
 
+    }
+    private void Player1Scores()
+    { 
+        //call function GoalPlayer1 on GameMaster
+        GameMaster.GetComponent<ScoreTracker>().GoalPlayer1();
+        Destroy(gameObject);
+    }
+
+    private void Player2Scores()
+    {
+        //call function GoalPlayer2 on GameMaster
+        GameMaster.GetComponent<ScoreTracker>().GoalPlayer2();
+        Destroy(gameObject);
     }
 }
 

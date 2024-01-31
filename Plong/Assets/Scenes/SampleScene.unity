@@ -267,8 +267,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clip:
-  - {fileID: 8300000, guid: 4cec06d8b81645b41a76286eab499afb, type: 3}
+  - {fileID: 8300000, guid: 15e84e766db878441bd356c3779068a7, type: 3}
   - {fileID: 8300000, guid: 2759d9b3059096141b7dd085f743de73, type: 3}
+  - {fileID: 8300000, guid: b5403429d6dd1904892c3088c1aa36a4, type: 3}
+  - {fileID: 8300000, guid: 218f0aa4d267eb94c8508efe68158179, type: 3}
+  - {fileID: 8300000, guid: 8f257aa6bd9799844a26d2afbb6c9a03, type: 3}
+  - {fileID: 8300000, guid: 7d214b5e55410754ab816d8799d42e7b, type: 3}
+  - {fileID: 8300000, guid: ce658b179cbe6b14d9059f3dc635d50c, type: 3}
+  Filter: 1
   FilterByTag: Ball
   ClipSelect: 0
   RandomClip: 1
@@ -674,6 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Clip:
   - {fileID: 8300000, guid: 4cec06d8b81645b41a76286eab499afb, type: 3}
+  Filter: 1
   FilterByTag: Ball
   ClipSelect: 0
   RandomClip: 0
@@ -1059,6 +1066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Clip:
   - {fileID: 8300000, guid: 4cec06d8b81645b41a76286eab499afb, type: 3}
+  Filter: 1
   FilterByTag: Ball
   ClipSelect: 0
   RandomClip: 0
@@ -1571,6 +1579,7 @@ GameObject:
   - component: {fileID: 1273607818}
   - component: {fileID: 1273607817}
   - component: {fileID: 1273607816}
+  - component: {fileID: 1273607819}
   m_Layer: 0
   m_Name: RightGoal
   m_TagString: Untagged
@@ -1690,6 +1699,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273607819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273607815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip:
+  - {fileID: 8300000, guid: 6f78ea151b8482647a30c8cc521800fc, type: 3}
+  Filter: 0
+  FilterByTag: MainCamera
+  ClipSelect: 0
+  RandomClip: 0
 --- !u!1 &1340955281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,8 +2157,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Clip:
-  - {fileID: 8300000, guid: 4cec06d8b81645b41a76286eab499afb, type: 3}
+  - {fileID: 8300000, guid: 15e84e766db878441bd356c3779068a7, type: 3}
+  - {fileID: 8300000, guid: b5403429d6dd1904892c3088c1aa36a4, type: 3}
+  - {fileID: 8300000, guid: 218f0aa4d267eb94c8508efe68158179, type: 3}
+  - {fileID: 8300000, guid: 8f257aa6bd9799844a26d2afbb6c9a03, type: 3}
+  - {fileID: 8300000, guid: 7d214b5e55410754ab816d8799d42e7b, type: 3}
   - {fileID: 8300000, guid: 2759d9b3059096141b7dd085f743de73, type: 3}
+  - {fileID: 8300000, guid: ce658b179cbe6b14d9059f3dc635d50c, type: 3}
+  Filter: 1
   FilterByTag: Ball
   ClipSelect: 0
   RandomClip: 1
@@ -2146,6 +2179,7 @@ GameObject:
   - component: {fileID: 1455831260}
   - component: {fileID: 1455831259}
   - component: {fileID: 1455831258}
+  - component: {fileID: 1455831261}
   m_Layer: 0
   m_Name: LeftGoal
   m_TagString: Untagged
@@ -2265,6 +2299,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455831261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455831257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip:
+  - {fileID: 8300000, guid: 6f78ea151b8482647a30c8cc521800fc, type: 3}
+  Filter: 0
+  FilterByTag: MainCamera
+  ClipSelect: 0
+  RandomClip: 0
 --- !u!1 &1478316257
 GameObject:
   m_ObjectHideFlags: 0

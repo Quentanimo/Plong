@@ -21,8 +21,11 @@ public class PlayClipOnCollision : MonoBehaviour
     private SFXClips SFXPlayer;        //Script that exists on SFX child of AudioMaster
     public AudioClip[] Clip;           //Array of Clips, add whatever audio clips you'd like to the array
 
+    [SerializeField] private
+    bool Filter = false;                //Choose whether or not to filter collisions by tag
+
     [SerializeField] private            //Add a tag so SFX is only triggered by collision with objects that share tag
-    string FilterByTag = null;          //leave null to allow any collision to trigger SFX
+    string FilterByTag = "MainCamera";          //leave "MainCamera" to disable filtering. Tried Null and unassigned Tags, Unity simply just won't let it fly, 
     
     [SerializeField] private            //for non-randomized plays, 
     int ClipSelect = 0;                 //select which clip should play by its number in the array
@@ -47,7 +50,7 @@ public class PlayClipOnCollision : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //check to see if a tag has been given to filter by
-        if (FilterByTag != null)
+        if (Filter)
         {
             //check to see if collision is with the object specified by FilterByTag
             if (collision.gameObject.CompareTag(FilterByTag))
