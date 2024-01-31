@@ -80,17 +80,19 @@ public class KickoffBall : MonoBehaviour
 
     }
     private void Player1Scores()
-    { 
+    {
+        Destroy(gameObject);
         //call function GoalPlayer1 on GameMaster
         GameMaster.GetComponent<ScoreTracker>().GoalPlayer1();
-        Destroy(gameObject);
+        
     }
 
     private void Player2Scores()
     {
+        Destroy(gameObject);
         //call function GoalPlayer2 on GameMaster
         GameMaster.GetComponent<ScoreTracker>().GoalPlayer2();
-        Destroy(gameObject);
+        
     }
 }
 
