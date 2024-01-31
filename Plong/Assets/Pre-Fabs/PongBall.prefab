@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   ServeDelay: 1
-  TimeBeforeNextRound: 0
+  TimeBeforeNextRound: 2.2
 --- !u!58 &8301957290458908648
 CircleCollider2D:
   m_ObjectHideFlags: 0

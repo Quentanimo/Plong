@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 162002218}
   - component: {fileID: 162002217}
   - component: {fileID: 162002216}
+  - component: {fileID: 162002220}
   m_Layer: 3
   m_Name: BottomWall
   m_TagString: Wall
@@ -253,6 +254,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &162002220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162002215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip:
+  - {fileID: 8300000, guid: 15e84e766db878441bd356c3779068a7, type: 3}
+  - {fileID: 8300000, guid: 2759d9b3059096141b7dd085f743de73, type: 3}
+  - {fileID: 8300000, guid: b5403429d6dd1904892c3088c1aa36a4, type: 3}
+  - {fileID: 8300000, guid: 218f0aa4d267eb94c8508efe68158179, type: 3}
+  - {fileID: 8300000, guid: 8f257aa6bd9799844a26d2afbb6c9a03, type: 3}
+  - {fileID: 8300000, guid: 7d214b5e55410754ab816d8799d42e7b, type: 3}
+  - {fileID: 8300000, guid: ce658b179cbe6b14d9059f3dc635d50c, type: 3}
+  Filter: 1
+  FilterByTag: Ball
+  ClipSelect: 0
+  RandomClip: 1
 --- !u!1 &178222060
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 457, y: 262}
+  m_AnchoredPosition: {x: 333.57922, y: 198}
   m_SizeDelta: {x: 94.4516, y: 28.4936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178222062
@@ -478,6 +503,7 @@ GameObject:
   - component: {fileID: 290908030}
   - component: {fileID: 290908029}
   - component: {fileID: 290908028}
+  - component: {fileID: 290908033}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Paddle
@@ -640,6 +666,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &290908033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290908027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip:
+  - {fileID: 8300000, guid: 4cec06d8b81645b41a76286eab499afb, type: 3}
+  Filter: 1
+  FilterByTag: Ball
+  ClipSelect: 0
+  RandomClip: 0
 --- !u!1 &479455008
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,6 +844,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &652399593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 652399594}
+  m_Layer: 0
+  m_Name: AudioMaster
+  m_TagString: Audio
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652399594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652399593}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.545018, y: 0.45212048, z: 0.04260043}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1588831993}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843175573
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,6 +889,7 @@ GameObject:
   - component: {fileID: 843175576}
   - component: {fileID: 843175578}
   - component: {fileID: 843175577}
+  - component: {fileID: 843175579}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Paddle
@@ -975,6 +1052,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!114 &843175579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843175573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip:
+  - {fileID: 8300000, guid: 4cec06d8b81645b41a76286eab499afb, type: 3}
+  Filter: 1
+  FilterByTag: Ball
+  ClipSelect: 0
+  RandomClip: 0
 --- !u!1 &883190671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1579,7 @@ GameObject:
   - component: {fileID: 1273607818}
   - component: {fileID: 1273607817}
   - component: {fileID: 1273607816}
+  - component: {fileID: 1273607819}
   m_Layer: 0
   m_Name: RightGoal
   m_TagString: Untagged
@@ -1603,6 +1699,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273607819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273607815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip:
+  - {fileID: 8300000, guid: 6f78ea151b8482647a30c8cc521800fc, type: 3}
+  Filter: 0
+  FilterByTag: MainCamera
+  ClipSelect: 0
+  RandomClip: 0
 --- !u!1 &1340955281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,6 +2024,7 @@ GameObject:
   - component: {fileID: 1409148273}
   - component: {fileID: 1409148272}
   - component: {fileID: 1409148271}
+  - component: {fileID: 1409148274}
   m_Layer: 3
   m_Name: TopWall
   m_TagString: Wall
@@ -2029,6 +2144,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1409148274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409148270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip:
+  - {fileID: 8300000, guid: 15e84e766db878441bd356c3779068a7, type: 3}
+  - {fileID: 8300000, guid: b5403429d6dd1904892c3088c1aa36a4, type: 3}
+  - {fileID: 8300000, guid: 218f0aa4d267eb94c8508efe68158179, type: 3}
+  - {fileID: 8300000, guid: 8f257aa6bd9799844a26d2afbb6c9a03, type: 3}
+  - {fileID: 8300000, guid: 7d214b5e55410754ab816d8799d42e7b, type: 3}
+  - {fileID: 8300000, guid: 2759d9b3059096141b7dd085f743de73, type: 3}
+  - {fileID: 8300000, guid: ce658b179cbe6b14d9059f3dc635d50c, type: 3}
+  Filter: 1
+  FilterByTag: Ball
+  ClipSelect: 0
+  RandomClip: 1
 --- !u!1 &1455831257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2179,7 @@ GameObject:
   - component: {fileID: 1455831260}
   - component: {fileID: 1455831259}
   - component: {fileID: 1455831258}
+  - component: {fileID: 1455831261}
   m_Layer: 0
   m_Name: LeftGoal
   m_TagString: Untagged
@@ -2159,6 +2299,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455831261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455831257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip:
+  - {fileID: 8300000, guid: 6f78ea151b8482647a30c8cc521800fc, type: 3}
+  Filter: 0
+  FilterByTag: MainCamera
+  ClipSelect: 0
+  RandomClip: 0
 --- !u!1 &1478316257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,6 +2450,148 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478316257}
   m_CullTransparentMesh: 1
+--- !u!1 &1588831992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588831993}
+  - component: {fileID: 1588831995}
+  - component: {fileID: 1588831994}
+  m_Layer: 0
+  m_Name: SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1588831993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588831992}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 652399594}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1588831994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588831992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f907731cd81c14fb22b9bcc24a8934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SFXPlayer: {fileID: 1588831995}
+--- !u!82 &1588831995
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588831992}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1705611273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2727,3 +3027,4 @@ SceneRoots:
   - {fileID: 1013792569}
   - {fileID: 479455011}
   - {fileID: 883190675}
+  - {fileID: 652399594}
