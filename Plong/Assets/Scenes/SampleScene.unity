@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 162002217}
   - component: {fileID: 162002216}
   - component: {fileID: 162002220}
+  - component: {fileID: 162002221}
   m_Layer: 3
   m_Name: BottomWall
   m_TagString: Wall
@@ -278,6 +279,33 @@ MonoBehaviour:
   FilterByTag: Ball
   ClipSelect: 0
   RandomClip: 1
+--- !u!50 &162002221
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162002215}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &173174689
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 0
-  speed: 5
+  speed: 8
   rb: {fileID: 290908029}
   movement: 0
 --- !u!50 &290908029
@@ -1097,7 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 1
-  speed: 5
+  speed: 8
   rb: {fileID: 843175578}
   movement: 0
 --- !u!50 &843175578
@@ -1114,7 +1142,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2100,6 +2128,7 @@ GameObject:
   - component: {fileID: 1409148272}
   - component: {fileID: 1409148271}
   - component: {fileID: 1409148274}
+  - component: {fileID: 1409148275}
   m_Layer: 3
   m_Name: TopWall
   m_TagString: Wall
@@ -2243,6 +2272,33 @@ MonoBehaviour:
   FilterByTag: Ball
   ClipSelect: 0
   RandomClip: 1
+--- !u!50 &1409148275
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409148270}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1455831257
 GameObject:
   m_ObjectHideFlags: 0
@@ -2939,6 +2995,7 @@ GameObject:
   - component: {fileID: 2112424048}
   - component: {fileID: 2112424050}
   - component: {fileID: 2112424051}
+  - component: {fileID: 2112424052}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GameController
@@ -3007,6 +3064,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _RoundReset: {fileID: 2112424050}
+--- !u!114 &2112424052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112424047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6448751243416b5468e4a94aab1d31d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
