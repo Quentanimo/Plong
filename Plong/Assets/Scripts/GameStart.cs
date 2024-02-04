@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveObject : MonoBehaviour
+public class GameStart : MonoBehaviour
 {
-    public float MaxSpeed = 1f;
+
+    public RoundReset _RoundReset;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _RoundReset.Reset();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        transform.position += transform.up * MaxSpeed * Time.deltaTime;
+        
     }
 }
