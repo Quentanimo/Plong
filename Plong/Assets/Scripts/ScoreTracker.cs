@@ -8,7 +8,7 @@ public class ScoreTracker : MonoBehaviour
 
     [SerializeField] private int Player1Score = 0;
     [SerializeField] private int Player2Score = 0;
-    [SerializeField] private int WinCondition = 10;
+    [SerializeField] private int WinCondition = 11;
     public RoundReset _RoundReset;
     public bool P1WonLastRound;     //did P1 win last round? used for determining direction ball should be served. Randomized at Start
     public Text Player1ScoreText;
