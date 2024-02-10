@@ -3949,7 +3949,8 @@ GameObject:
   - component: {fileID: 1691998993}
   - component: {fileID: 1691998992}
   - component: {fileID: 1691998994}
-  - component: {fileID: 1691998995}
+  - component: {fileID: 1691998996}
+  - component: {fileID: 1691998997}
   m_Layer: 0
   m_Name: SpotLight
   m_TagString: Untagged
@@ -4040,7 +4041,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 1
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.9150943, g: 0.13381095, b: 0.13381095, a: 1}
+  m_Color: {r: 0.93207544, g: 0.93207544, b: 0.93207544, a: 1}
   m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -4074,7 +4075,7 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
---- !u!114 &1691998995
+--- !u!114 &1691998996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4083,12 +4084,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1691998990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3d8a1b9ae33442488cc8d9aff3511b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8573d70bb9a8ae6438eb1b3d09affd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IntensityIncrement: 0.005
-  IntensityUpperbound: 2
-  IntensityLowerbound: 0.01
+  TransSpeed: 1
+  InitialColor: {r: 1, g: 1, b: 1, a: 1}
+  TransitionaryColor: {r: 0.65566313, g: 0.06747586, b: 0.9169811, a: 1}
+--- !u!114 &1691998997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691998990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4f31abbcdae094abf907b5bde84f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransSpeed: 1
+  IntensityMax: 1
 --- !u!1 &1705611273
 GameObject:
   m_ObjectHideFlags: 0
@@ -4445,7 +4460,6 @@ GameObject:
   - component: {fileID: 2112424048}
   - component: {fileID: 2112424050}
   - component: {fileID: 2112424051}
-  - component: {fileID: 2112424052}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GameController
@@ -4514,18 +4528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _RoundReset: {fileID: 2112424050}
---- !u!114 &2112424052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112424047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6448751243416b5468e4a94aab1d31d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

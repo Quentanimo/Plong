@@ -4,6 +4,17 @@ using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+/*=====================================================================================================================================================
+ * ------------------------------------------------------LIGHTS PULSE VERSION 1------------------------------------------------------------------------
+ * Ver. 1
+ * This is the original, bulkier version of the Lights Pulse script
+ * it will cause a light to gradually swell and shrink in intensity
+ * key differences between the V1 and V2 are that:
+ * 1. Ver. 2 is more lightweight
+ * 2. Ver. 2 lower intensity boundary is fixed at zero (this is the main trade off resulting from using Mathf.PingPong)
+ * if you would like the lights intensity to drop to 0 on the lower bound, you should use Lights Pulse V2
+ */
+
 public class Lights_Pulse : MonoBehaviour
 {
     private Light2D LightComponent = null;                          //light component for URP lighting engine
