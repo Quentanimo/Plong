@@ -9,8 +9,8 @@ public class MoveBall : MonoBehaviour
     public float speed;
     public float ServeDelay = 1f; //Time Between ball being instantiated and it being served to players
     [SerializeField] private float TimeBeforeNextRound = 0f;
-    [SerializeField]
-    private float F;
+    [SerializeField]private float F;
+    [SerializeField] private float KickoffForce = 300;
     Vector2 direction; //(x,y)
     Rigidbody2D rb;
     private GameObject GameMaster = null;
@@ -53,7 +53,7 @@ public class MoveBall : MonoBehaviour
         //to store that conditional in a bool with a more human-friendly name and use the bool in the if statement.
         bool CollisionIsWall = (collision.gameObject.CompareTag("Wall"));
         bool CollisionHasRigidBody = (collision.rigidbody != null);
-        
+        /*
         if (CollisionIsWall)
         {
             rb.AddForce(rb.velocity.normalized * F / 5f);
@@ -63,9 +63,9 @@ public class MoveBall : MonoBehaviour
             //this will give a little boost to X, and will always be in the direction of the balls current trajectory
             //divide by 5, because I really should make a different variable for this than using 'F', but eh
         }
-        
+        */
          
-        if (CollisionHasRigidBody)
+        if (CollisionHasRigidBody & !CollisionIsWall)
         {
             ContactPoint2D[] contact = new ContactPoint2D[collision.contactCount];
             //gets the contact point for the collision. This is used in the next step to find the normal vector of the collision
@@ -77,8 +77,18 @@ public class MoveBall : MonoBehaviour
             //so if the paddle is moving when the ball collides with it,the paddle will impart some of its velocity to the ball.
             //this allows for trickshots
             //reduced by 40% because 100% of F means the ball goes absolutely wild.
+            if (collision.GetContact(0).normal.x == 0)
+            {
+
+                rb.AddForce(-rb.velocity * F*2);
+            }
         }
 
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         //------------------Goal Conditions----------------------
         if (collision.gameObject.name == "LeftGoal")
         {
@@ -98,21 +108,22 @@ public class MoveBall : MonoBehaviour
             Negate = -1;
         }
 
-        rb.AddForce(new Vector2(Negate * F, Random.value*F));//(1,1)
+        rb.AddForce(new Vector2(Negate * KickoffForce, Random.value*KickoffForce));
     }
 
     private void Player1Scores()
     {
-        Destroy(gameObject);
+        
         //call function GoalPlayer1 on GameMaster
         GameMaster.GetComponent<ScoreTracker>().GoalPlayer1();
-
+        Destroy(gameObject);
     }
 
     private void Player2Scores()
     {
-        Destroy(gameObject);
+        
         //call function GoalPlayer2 on GameMaster
         GameMaster.GetComponent<ScoreTracker>().GoalPlayer2();
+        Destroy(gameObject);
     }
 }

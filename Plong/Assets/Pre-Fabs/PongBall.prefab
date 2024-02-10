@@ -50,7 +50,8 @@ MonoBehaviour:
   speed: 5
   ServeDelay: 1
   TimeBeforeNextRound: 2
-  F: 350
+  F: 30
+  KickoffForce: 300
 --- !u!58 &8301957290458908648
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1705633251548019977}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 737a0384d20285544b11a711e9e05c7f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
