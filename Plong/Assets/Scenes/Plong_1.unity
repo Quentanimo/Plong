@@ -593,8 +593,8 @@ GameObject:
   - component: {fileID: 162002218}
   - component: {fileID: 162002217}
   - component: {fileID: 162002216}
-  - component: {fileID: 162002220}
   - component: {fileID: 162002221}
+  - component: {fileID: 162002222}
   m_Layer: 3
   m_Name: BottomWall
   m_TagString: Wall
@@ -714,30 +714,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 786849978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &162002220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162002215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Clip:
-  - {fileID: 8300000, guid: 15e84e766db878441bd356c3779068a7, type: 3}
-  - {fileID: 8300000, guid: 2759d9b3059096141b7dd085f743de73, type: 3}
-  - {fileID: 8300000, guid: b5403429d6dd1904892c3088c1aa36a4, type: 3}
-  - {fileID: 8300000, guid: 218f0aa4d267eb94c8508efe68158179, type: 3}
-  - {fileID: 8300000, guid: 8f257aa6bd9799844a26d2afbb6c9a03, type: 3}
-  - {fileID: 8300000, guid: 7d214b5e55410754ab816d8799d42e7b, type: 3}
-  - {fileID: 8300000, guid: ce658b179cbe6b14d9059f3dc635d50c, type: 3}
-  Filter: 1
-  FilterByTag: Ball
-  ClipSelect: 0
-  RandomClip: 1
 --- !u!50 &162002221
 Rigidbody2D:
   serializedVersion: 4
@@ -765,6 +741,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &162002222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162002215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d29fdf6da3d8d046aeb5d595080e954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioFiles: {fileID: 11400000, guid: 1a14167b67fb1a84ba44d37af9f10023, type: 2}
+  Filter: 1
+  FilterByTag: Ball
+  ClipSelect: 0
+  RandomClip: 1
 --- !u!1 &173174689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,7 +2845,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2944,7 +2937,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1273607815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Script: {fileID: 11500000, guid: d695401dafac45b41af6a5a71239d503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Clip:
@@ -3260,7 +3253,7 @@ GameObject:
   - component: {fileID: 1409148273}
   - component: {fileID: 1409148272}
   - component: {fileID: 1409148271}
-  - component: {fileID: 1409148274}
+  - component: {fileID: 1409148276}
   - component: {fileID: 1409148275}
   m_Layer: 3
   m_Name: TopWall
@@ -3381,30 +3374,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 786849978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1409148274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409148270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Clip:
-  - {fileID: 8300000, guid: 15e84e766db878441bd356c3779068a7, type: 3}
-  - {fileID: 8300000, guid: b5403429d6dd1904892c3088c1aa36a4, type: 3}
-  - {fileID: 8300000, guid: 218f0aa4d267eb94c8508efe68158179, type: 3}
-  - {fileID: 8300000, guid: 8f257aa6bd9799844a26d2afbb6c9a03, type: 3}
-  - {fileID: 8300000, guid: 7d214b5e55410754ab816d8799d42e7b, type: 3}
-  - {fileID: 8300000, guid: 2759d9b3059096141b7dd085f743de73, type: 3}
-  - {fileID: 8300000, guid: ce658b179cbe6b14d9059f3dc635d50c, type: 3}
-  Filter: 1
-  FilterByTag: Ball
-  ClipSelect: 0
-  RandomClip: 1
 --- !u!50 &1409148275
 Rigidbody2D:
   serializedVersion: 4
@@ -3432,6 +3401,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1409148276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409148270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d29fdf6da3d8d046aeb5d595080e954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioFiles: {fileID: 11400000, guid: 1a14167b67fb1a84ba44d37af9f10023, type: 2}
+  Filter: 1
+  FilterByTag: Ball
+  ClipSelect: 0
+  RandomClip: 1
 --- !u!1 &1446825148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,7 +3548,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3654,7 +3640,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1455831257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93183318c0465d46a354df5944e7fdb, type: 3}
+  m_Script: {fileID: 11500000, guid: d695401dafac45b41af6a5a71239d503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Clip:

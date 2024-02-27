@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff130b5362d881b40b48ef20ca8b6332, type: 3}
+  m_Name: WallBounceSFX
+  m_EditorClassIdentifier: 
+  AudioFiles:
+  - {fileID: 8300000, guid: ce658b179cbe6b14d9059f3dc635d50c, type: 3}
+  - {fileID: 8300000, guid: 15e84e766db878441bd356c3779068a7, type: 3}
+  - {fileID: 8300000, guid: b5403429d6dd1904892c3088c1aa36a4, type: 3}
+  - {fileID: 8300000, guid: 218f0aa4d267eb94c8508efe68158179, type: 3}
+  - {fileID: 8300000, guid: 8f257aa6bd9799844a26d2afbb6c9a03, type: 3}
+  - {fileID: 8300000, guid: 7d214b5e55410754ab816d8799d42e7b, type: 3}
+  - {fileID: 8300000, guid: 2759d9b3059096141b7dd085f743de73, type: 3}
